@@ -1,7 +1,7 @@
 const GITHUB_URL = process.env.REACT_APP_GITHUB_URL;
 const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN;
 
-//* Getting All users from github API (testing purpose)
+//* Getting All users from github API
 export const getUsers = async (text) => {
   const params = new URLSearchParams({
     q: text,
@@ -13,6 +13,7 @@ export const getUsers = async (text) => {
     },
   });
   const { items } = await response.json();
+
   return items;
 };
 
